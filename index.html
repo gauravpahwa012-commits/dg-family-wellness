@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="theme-color" content="#315b46">
+
+<title>DG Family Wellness | Dr. Gaurav Pahwa</title>
+
+<style>
+
+:root{--green:#315b46;--light:#e9f1e9;--cream:#faf9f5;--ink:#243229;--muted:#68746c}
+
+*{box-sizing:border-box}
+
+body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+
+header{background:white;padding:20px 18px 15px;border-bottom:1px solid #e3e8e1;position:sticky;top:0;z-index:2}
+
+.brand{font-size:22px;font-weight:850;color:var(--green);letter-spacing:-.7px}
+
+.tagline{font-size:12px;color:var(--muted);margin-top:4px}
+
+main{max-width:700px;margin:auto;padding:18px 16px 90px}
+
+.hero{background:var(--green);color:white;border-radius:23px;padding:23px 20px;margin-bottom:18px}
+
+.hero small{color:#d8e8da;font-weight:700;letter-spacing:1px}
+
+.hero h1{font-size:30px;line-height:1.15;margin:12px 0}
+
+.hero p{color:#e4eee5;line-height:1.6;font-size:14px}
+
+button,a{cursor:pointer}
+
+.btn{border:0;border-radius:12px;padding:12px 16px;background:white;color:var(--green);font-size:14px;font-weight:750;text-decoration:none;display:inline-block}
+
+.section-title{font-size:19px;margin:24px 0 12px}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+.card{background:white;border:1px solid #e5e9e3;border-radius:17px;padding:16px;min-width:0}
+
+.emoji{font-size:28px}
+
+.card h3{font-size:15px;margin:9px 0 6px}
+
+.card p{font-size:12px;color:var(--muted);line-height:1.55;margin:0 0 12px}
+
+.linkbtn{display:inline-block;color:var(--green);font-size:13px;font-weight:750;text-decoration:none}
+
+.booking{background:var(--light);border:1px solid #d9e6d9;border-radius:19px;padding:18px;margin-top:16px}
+
+.booking h2{margin:0 0 7px;font-size:20px}
+
+.booking p{font-size:13px;color:var(--muted);line-height:1.5}
+
+form label{display:block;font-size:13px;font-weight:700;margin:13px 0 6px}
+
+input,select,textarea{width:100%;padding:12px;border:1px solid #d6ded5;border-radius:10px;background:white;font:inherit;font-size:14px}
+
+textarea{min-height:75px}
+
+.submit{margin-top:15px;width:100%;background:var(--green);color:white;border:0;border-radius:12px;padding:14px;font-weight:750;font-size:15px}
+
+.note{font-size:11px!important}
+
+footer{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #e4e8e2;display:flex;justify-content:space-around;padding:11px 4px calc(11px + env(safe-area-inset-bottom));z-index:3}
+
+footer a{font-size:11px;color:var(--green);text-decoration:none;text-align:center;font-weight:700}
+
+footer span{display:block;font-size:19px;margin-bottom:3px}
+
+@media(max-width:380px){.grid{grid-template-columns:1fr}.hero h1{font-size:26px}}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="brand">DG Family Wellness</div>
+
+  <div class="tagline">By Dr. Gaurav Pahwa · Healthy families, happier lives</div>
+
+</header>
+
+<main id="home">
+
+  <section class="hero">
+
+    <small>WELCOME TO YOUR FAMILY WELLNESS SPACE</small>
+
+    <h1>Healthier parents.<br>Healthier kids.</h1>
+
+    <p>Doctor-led health education, practical workouts and family nutrition—all in one place.</p>
+
+    <a class="btn" href="#explore">Explore wellness ↓</a>
+
+  </section>
+
+  <h2 class="section-title">Book your child's appointment</h2>
+
+  <section class="booking" id="appointment">
+
+    <div class="emoji">🩺</div>
+
+    <h2>Book a pediatric consultation</h2>
+
+    <p>Request an appointment with Dr. Gaurav Pahwa.</p>
+
+    <form id="bookingForm">
+
+      <label for="parent">Parent / guardian name *</label>
+
+      <input id="parent" required autocomplete="name" placeholder="Enter your name">
+
+      <label for="phone">Contact number *</label>
+
+      <input id="phone" required type="tel" inputmode="tel" autocomplete="tel" placeholder="Enter phone number">
+
+      <label for="age">Child's age *</label>
+
+      <select id="age" required>
+
+        <option value="">Select age group</option>
+
+        <option>Under 1 month</option><option>1–12 months</option>
+
+        <option>1–5 years</option><option>6–12 years</option><option>13–18 years</option>
+
+      </select>
+
+      <label for="date">Preferred appointment date</label>
+
+      <input id="date" type="date">
+
+      <label for="time">Preferred time</label>
+
+      <select id="time"><option value="">Select time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+
+      <label for="reason">Reason for visit (optional)</label>
+
+      <textarea id="reason" placeholder="Brief reason for consultation"></textarea>
+
+      <button class="submit" type="submit">Continue appointment request</button>
+
+      <p class="note">Demo only: this form does not send or book an appointment yet. Please don't enter sensitive medical information.</p>
+
+      <p id="status" role="status" aria-live="polite"></p>
+
+    </form>
+
+  </section>
+
+  <h2 class="section-title" id="explore">Explore family wellness</h2>
+
+  <section class="grid">
+
+    <article class="card">
+
+      <div class="emoji">👨‍⚕️</div>
+
+      <h3>Doctor Diaries</h3>
+
+      <p>Child health education, pediatric tips and behind-the-scenes doctor life.</p>
+
+      <a class="linkbtn" href="#doctor">Explore topics →</a>
+
+    </article>
+
+    <article class="card">
+
+      <div class="emoji">💪</div>
+
+      <h3>Parent Fitness</h3>
+
+      <p>Beginner workouts, strength training, mobility and realistic routines.</p>
+
+      <a class="linkbtn" href="#fitness">Explore workouts →</a>
+
+    </article>
+
+    <article class="card">
+
+      <div class="emoji">🥗</div>
+
+      <h3>Parent Nutrition</h3>
+
+      <p>Balanced meals, practical meal planning and healthy eating habits.</p>
+
+      <a class="linkbtn" href="#parent-food">Explore nutrition →</a>
+
+    </article>
+
+    <article class="card">
+
+      <div class="emoji">🧒</div>
+
+      <h3>Child Nutrition</h3>
+
+      <p>Age-appropriate feeding education, lunch ideas and family food habits.</p>
+
+      <a class="linkbtn" href="#child-food">Explore child nutrition →</a>
+
+    </article>
+
+  </section>
+
+  <h2 class="section-title" id="doctor">Doctor Diaries</h2>
+
+  <section class="card">
+
+    <h3>Everyday child health education</h3>
+
+    <p>Topics to explore: vaccination, complementary feeding, newborn care, fever safety and common parenting questions.</p>
+
+    <a class="linkbtn" href="#home">Back to top ↑</a>
+
+  </section>
+
+  <h2 class="section-title" id="fitness">Parent Fitness</h2>
+
+  <section class="card">
+
+    <h3>Your starter workout</h3>
+
+    <p>Begin with a comfortable walk, chair squats, wall push-ups and gentle mobility. Adjust activity to your fitness and health status.</p>
+
+    <a class="linkbtn" href="#home">Back to top ↑</a>
+
+  </section>
+
+  <h2 class="section-title" id="parent-food">Parent Nutrition</h2>
+
+  <section class="card">
+
+    <h3>Build a balanced plate</h3>
+
+    <p>Include vegetables, protein-rich foods, whole grains and healthy fats. Personalise portions to your goals and health needs.</p>
+
+    <a class="linkbtn" href="#home">Back to top ↑</a>
+
+  </section>
+
+  <h2 class="section-title" id="child-food">Child Nutrition</h2>
+
+  <section class="card">
+
+    <h3>Nutrition that grows with your child</h3>
+
+    <p>Feeding guidance depends on age, development, allergies and medical needs. Babies under 6 months generally need breast milk or appropriate infant formula unless a clinician advises otherwise.</p>
+
+    <a class="linkbtn" href="#home">Back to top ↑</a>
+
+  </section>
+
+  <p class="note">Educational content only; not a substitute for individual medical assessment. Seek urgent care for emergencies.</p>
+
+</main>
+
+<footer>
+
+  <a href="#home"><span>⌂</span>Home</a>
+
+  <a href="#doctor"><span>🩺</span>Doctor</a>
+
+  <a href="#fitness"><span>💪</span>Fitness</a>
+
+  <a href="#parent-food"><span>🥗</span>Nutrition</a>
+
+  <a href="#appointment"><span>📅</span>Appointment</a>
+
+</footer>
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit",function(event){
+
+  event.preventDefault();
+
+  document.getElementById("status").textContent =
+
+    "Demo only: your details have not been sent and no appointment has been booked. A secure booking system must be connected before launch.";
+
+});
+
+</script>
+
+</body>
+
+</html>
