@@ -284,17 +284,47 @@ footer span{display:block;font-size:19px;margin-bottom:3px}
 
 <script>
 
-document.getElementById("bookingForm").addEventListener("submit",function(event){
+const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
 
   event.preventDefault();
 
-  document.getElementById("status").textContent =
+  if (!this.reportValidity()) return;
 
-    "Demo only: your details have not been sent and no appointment has been booked. A secure booking system must be connected before launch.";
+  const parent = document.getElementById("parent").value.trim();
 
-});
+  const phone = document.getElementById("phone").value.trim();
 
-</script>
+  const age = document.getElementById("age").value;
+
+  const date = document.getElementById("date").value || "Not specified";
+
+  const time = document.getElementById("time").value || "Not specified";
+
+  const reason = document.getElementById("reason").value.trim();
+
+  const message = [
+
+    "DG FAMILY WELLNESS - APPOINTMENT REQUEST",
+
+    "",
+
+    "Parent/Guardian: " + parent,
+
+    "Contact number: " + phone,
+
+    "Child's age group: " + age,
+
+    "Preferred date: " + date,
+
+    "Preferred time: " + time,
+
+    reason ? "Brief reason: " + reason : "",
+
+    "",
+
+    "Please confirm appointment availability."
 
 </body>
 
