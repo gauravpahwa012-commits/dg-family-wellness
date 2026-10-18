@@ -325,7 +325,17 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
     "",
 
     "Please confirm appointment availability."
+ ].filter(Boolean).join("\n");
 
+  const url = "https://wa.me/" + WHATSAPP_NUMBER +
+
+    "?text=" + encodeURIComponent(message);
+
+  window.location.href = url;
+
+});
+
+</script>
 </body>
 
 </html>
